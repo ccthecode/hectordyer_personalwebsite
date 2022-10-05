@@ -1,0 +1,66 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Hector Dyer"
+themesDir = "themes"
+theme = "hugo-hero-theme"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.92.0"
+    
+[params]
+  google_analytics_id=""
+  custom_css = ["css/custom.css"]
+
+  [params.site_name]
+    value = ["Hector", "Dyer"]
+
+  [params.logo]
+    mobile = "images/logo-mobile.svg"
+    mobile_height = "36px"
+    mobile_width = "36px"
+    desktop = "images/logo.svg"
+    desktop_height = "29px"
+    desktop_width = "217px"
+    alt = "Hector Dyer"
+
+  [params.homepage_meta_tags]
+    meta_description = "Hector Dyer - portfolio website."
+    meta_og_title = "Hector Dyer"
+    meta_og_type = "website"
+    meta_og_url = "https://hugo-hero.netlify.app"
+    meta_og_image = "https://raw.githubusercontent.com/JugglerX/hugo-hero-theme/master/images/tn.png"
+    meta_og_description = "Hector Dyer - portfolio website."
+    meta_twitter_card = "summary"
+    meta_twitter_site = "@zerostaticio"
+    meta_twitter_creator = "@zerostaticio"
+
+
+[[menu.main]]
+    name = "Cloth"
+    url = "/cloth/"
+    weight = 1
+
+[[menu.main]]
+    name = "Digital + Design"
+    url = "/digital+design/"
+    weight = 2
+
+[[menu.main]]
+    name = "Performance"
+    url = "/performance/"
+    weight = 3
+
+[[menu.main]]
+    name = "About / Contact"
+    url = "/about_contact/"
+    weight = 4
+
+[permalinks]
+  post = "/:year/:month/:day/:slug/"
+  pages = "/:filename/"
+
+
+[markup.goldmark.renderer]
+  unsafe = true

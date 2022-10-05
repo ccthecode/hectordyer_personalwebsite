@@ -1,0 +1,22 @@
+<div class='header header-absolute'>
+  <div class="container">
+    {{$name := site.Params.site_name.value}}
+    <div class="logo" style="font-size:1.2rem; text-transform: uppercase;">
+      
+      <a style="text-decoration: none;" href="{{ .Site.BaseURL }}">
+        <div style="color: black; font-weight: 400;  height:{{ .Site.Params.logo.desktop_height }}; width:{{ .Site.Params.logo.mobile_width }};" />
+        {{index $name 0}}<span style="color: black;">{{index $name 1}}</span></div>
+      </a>
+
+    </div>
+
+    <div class="logo-mobile">
+      <a style="text-decoration: none;" href="{{ .Site.BaseURL }}">
+        <div style="color: black; font-weight: 400;  height:{{ .Site.Params.logo.desktop_height }}; width:{{ .Site.Params.logo.mobile_width }};" />
+        {{index $name 0}}<span style="color: black;">{{index $name 1}}</span></div>
+      </a>
+    </div>
+    {{ partial "main-menu.html" . }}
+    {{ partial "hamburger.html" . }}
+  </div>
+</div>

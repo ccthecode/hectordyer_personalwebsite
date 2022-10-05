@@ -1,0 +1,136 @@
+// home page background
+:root{
+    --gallery-gutter: 15px;
+}
+
+.overflowX-hidden{
+    overflow-x: hidden;
+}
+
+.logo{
+    a{
+        div{
+            span{
+                margin-left: 6px;
+            }
+        }
+    }
+}
+
+.home-bg-div{
+    background-image: url(/images/homepage/do-us-a-solid-collage.jpg);
+    background-position: top 60px center;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    padding-block-start: 1rem;
+}
+
+.work.work-summary {
+    div{
+        overflow:hidden;
+        @media (max-width:775px) {
+            margin: auto;
+        }
+        a{
+            img{
+                width: 500px;
+                height: 380px;
+                object-fit: cover;
+                @media (max-width:1300px) {
+                    width: 400px;
+                    height: 250px;
+                    object-fit: cover;
+                }
+                @media (max-width:980px) {
+                    width: 300px;
+                    height: 250px;
+                    object-fit: cover;
+                }
+                
+                @media (max-width:775px) {
+                    max-width: 500px;
+                    width: 100%;
+                    min-height: 380px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+.remove-margin-md{
+    @media (max-width:800px) {
+        margin: 0 !important;
+    }
+
+}
+
+.image-gallery{
+    // overflow-x: scroll;
+    // max-width: 100vw;
+    @media (max-width:800px) {
+        width: 100vw;
+    }
+    // margin-bottom: 4rem;
+    .single-content{
+        // position: fixed;
+        padding-right: 100px;
+        h1{
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 14px;
+        }
+
+        // position: fixed;
+        left: 0;
+        right: 0;
+        // bottom: 0;
+        padding-top: 6rem;
+        @media (max-width:800px) {
+            position: unset;
+            padding: 5rem 2rem 0 2rem;
+        }
+    }
+    .image-slide{
+        padding-block-start: 30px;
+        margin-top: 0.5rem;
+        overflow-x: scroll;
+        height: calc(87vh - 15px);
+        display: flex;
+        @media (max-width:800px) {
+            margin-top: 0 !important;
+            flex-direction: column;
+            padding-block-start: 0;
+        }
+        img{
+            padding: var(--gallery-gutter);
+            width: 100%;
+        }
+    }
+}
+
+.left-panel-content{
+    position: absolute;
+    width: 30%;
+    background: #fff;
+    height: 97%;
+    top: 0;
+    bottom:0;
+}
+
+.workpage-list{
+    padding-top: 1.5rem;
+    padding-left: 5.5rem;
+    padding-bottom: 1.5rem;
+    h6{
+        font-size: 1.5rem;
+        color: var(--primary);
+        padding-bottom: 5px;
+    }
+    a{
+        color: #222;
+        text-decoration: underline;
+    }
+}

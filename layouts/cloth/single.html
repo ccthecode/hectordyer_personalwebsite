@@ -1,0 +1,59 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-work-single{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+
+<!-- <div class="container pt-4 pt-md-10 pb-4 pb-md-10"> -->
+<div class="">
+  <div class="row justify-content-start remove-margin-md">
+    <div class="col-12 col-md-8">
+      <div class="work work-single">
+        
+      </div>
+    </div>
+    <div class="image-gallery">
+      <!-- content -->
+      
+      <div class="container single-content">
+        <h1>{{.Params.title}}</h1>
+        {{.Content}}
+      </div>
+        <div class="image-slide">
+          {{range .Resources.ByType "image" }}
+          <img draggable="false" src="{{.}}" alt="{{.}} samples">
+          {{end}}
+        </div> 
+
+        <div class="workpage-list">
+          <h6>Digital + Design</h6>
+          <ul>
+            <li><a href="/cloth/strands/">Strands</a></li>
+            <li><a href="/cloth/weaving/">Weaving</a></li>
+            <li><a href="/cloth/systemic/">Systemic</a></li>
+            <li><a href="/cloth/applique/">Appliqué</a></li>
+            <li><a href="/cloth/horizons/">Horizons</a></li>
+          </ul>
+        </div>
+      
+      <!-- <div class="single-desc">
+
+      </div> -->
+    </div>
+  
+  </div>
+</div>
+  
+{{ end }}
+{{ define "footer_js" }}
+{{ $library := resources.Get "js/libs/library.js" }}
+{{ $services := resources.Get "js/pages/services.js" }}
+{{ $servicesJS := slice $library $services |resources.Concat "js/services.js" }}
+{{ if .Site.IsServer }}
+  <script type="text/javascript" src="{{ $servicesJS.RelPermalink }}"></script>
+  {{ else }}
+  <script type="text/javascript" src="{{ ($servicesJS | minify | fingerprint).RelPermalink }}"></script>
+  {{ end }}
+
+
+{{ end }}
