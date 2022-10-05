@@ -1,4 +1,4 @@
-### Creating New Pages
+## Creating New Pages
 Use the `model.md` as template for a single page.
 Create it within the `/content` directory using the name of your choice.
 
